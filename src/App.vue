@@ -1,26 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header-page></header-page>
+  <hero-section></hero-section>
+  <page-body></page-body>
+  <form-page></form-page>
+  <footer-page></footer-page>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import HeaderPage from "./components/HeaderPage.vue";
+import HeroSection from "./components/HeroSection.vue";
+import PageBody from "./components/PageBody.vue";
+import FormPage from "./components/FormPage.vue";
+import FooterPage from "./components/FooterPage.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HeaderPage,
+    HeroSection,
+    FooterPage,
+    PageBody,
+    FormPage
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
