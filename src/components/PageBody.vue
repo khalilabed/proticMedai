@@ -1,80 +1,132 @@
 <template>
-  <div class="container pt-5">
-    <div class="text-center pt-5">
-      <h3>مميزات لن تجدها في مكان آخر</h3>
-    </div>
-    <div class="py-5">
-      <div>
+  <div class="bg-body">
+    <div class="container pt-5">
+      <div class="text-center pt-5">
+        <h3 class="majallab36">مميزات لن تجدها في مكان آخر</h3>
+      </div>
+      <div class="py-5">
+        <div>
+          <div class="row">
+            <div class="col-6 text-center">
+              <div class="wraper">
+                <ul class="btn-wraper">
+                  <li
+                    v-for="item in section1.slice(0, 3)"
+                    :key="item.id"
+                    class="triangle-btn"
+                  >
+                    <a>
+                      <span class="triangle text-white majalla32">{{
+                        item.id
+                      }}</span>
+                    </a>
+                    <span class="triangle-text p-2 majalla32">{{
+                      item.text
+                    }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 text-center">
+              <div class="wraper">
+                <ul class="btn-wraper">
+                  <li
+                    v-for="item in section1.slice(3, 5)"
+                    :key="item.id"
+                    class="triangle-btn"
+                  >
+                    <a class="">
+                      <span class="triangle majalla32">{{ item.id }}</span>
+                    </a>
+                    <span class="triangle-text p-2 majalla32">{{
+                      item.text
+                    }}</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="row align-items-center justify-content-center text-center padd"
+      >
+        <div class="col-4">
+          <div class="d-flex align-items-center triangle-item right none">
+            <p class="ps-2 ps-3 tops majalla28">استهداف صحيح</p>
+            <img src="../assets/Arrow1.png" alt="" width="95px" class="none" />
+          </div>
+          <div class="d-flex align-items-center right none">
+            <p class="ps-3 majalla28">استهداف صحيح</p>
+            <img src="../assets/Arrow2.png" alt="" width="95px" height="20px" />
+          </div>
+          <div class="d-flex align-items-center right none">
+            <p class="pt-5 ps-3 majalla28">استهداف صحيح</p>
+            <img src="../assets/Arrow3.png" alt="" width="95px" class="none" />
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="box-book">
+            <img src="../assets/bok2.png" alt="" />
+          </div>
+        </div>
+
+        <div class="col-4">
+          <div class="d-flex align-items-center triangle-item right2 none">
+            <img src="../assets/Arrow4.png" alt="" width="95px" />
+            <p class="pe-3 tops majalla28">استهداف صحيح</p>
+          </div>
+          <div class="d-flex align-items-center right2 none">
+            <img src="../assets/Arrow6.png" alt="" width="95px" height="20px" />
+            <p class="pe-3 majalla28">استهداف صحيح</p>
+          </div>
+          <div class="d-flex align-items-center right2 none">
+            <img src="../assets/Arrow5.png" alt="" width="95px" class="" />
+            <p class="pt-5 pe-3 bott majalla28">استهداف صحيح</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="showmobile pb-5">
         <div class="row">
-          <div class="col-lg-6 text-center">
-            <div class="wraper">
-              <ul class="btn-wraper">
-                <li
-                  v-for="item in section1.slice(0, 3)"
-                  :key="item.id"
-                  class="triangle-btn"
-                >
-                  <a>
-                    <span class="triangle text-white">{{ item.id }}</span>
-                  </a>
-                  <span class="triangle-text p-2">{{ item.text }}</span>
-                </li>
-              </ul>
+          <div class="col-12">
+            <div class="box-book mob-img">
+              <img src="../assets/bok2.png" alt="" />
             </div>
           </div>
-          <div class="col-lg-6 text-center">
-            <div class="wraper">
-              <ul class="btn-wraper">
-                <li
-                  v-for="item in section1.slice(3, 5)"
-                  :key="item.id"
-                  class="triangle-btn"
-                >
-                  <a class="">
-                    <span class="triangle">{{ item.id }}</span>
-                  </a>
-                  <span class="triangle-text p-2">{{ item.text }}</span>
-                </li>
-              </ul>
+          <div class="col-6">
+            <div>
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="../assets/circle.png" alt="" width="40px" />
+                <p class="majalla28">استهداف صحيح</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="../assets/circle.png" alt="" width="40px" />
+                <p class="majalla28">استهداف صحيح</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="../assets/circle.png" alt="" width="40px" />
+                <p class="majalla28">استهداف صحيح</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="row align-items-center justify-content-center text-center py-5">
-      <div class="col-lg-3 col-md-12">
-        <div class="d-flex align-items-center triangle-item right none">
-          <p class="ps-2 ps-3 tops ">استهداف صحيح</p>
-          <img src="../assets/Arrow1.png" alt="" width="95px" class="none" />
-        </div>
-        <div class="d-flex align-items-center right none">
-          <p class="ps-3">استهداف صحيح</p>
-          <img src="../assets/Arrow2.png" alt="" width="95px" height="20px"   />
-        </div>
-        <div class="d-flex align-items-center right none">
-          <p class="pt-5 ps-3">استهداف صحيح</p>
-          <img src="../assets/Arrow3.png" alt="" width="95px" class="none" />
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-12">
-        <div class="box-book">
-          <img src="../assets/books3.png" alt=""  />
-        </div>
-      </div>
-
-      <div class="col-lg-3 col-md-12">
-        <div class="d-flex align-items-center triangle-item right2 none">
-          <img src="../assets/Arrow4.png" alt="" width="95px"  />
-          <p class="pe-3 tops">استهداف صحيح</p>
-        </div>
-        <div class="d-flex align-items-center right2 none">
-          <img src="../assets/Arrow6.png" alt="" width="95px" height="20px"  />
-          <p class="pe-3">استهداف صحيح</p>
-        </div>
-        <div class="d-flex align-items-center right2 none" >
-          <img src="../assets/Arrow5.png" alt="" width="95px" class=""  />
-          <p class="pt-5 pe-3 bott">استهداف صحيح</p>
+          <div class="col-6">
+            <div>
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="../assets/circle.png" alt="" width="40px" />
+                <p class="majalla28">استهداف صحيح</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="../assets/circle.png" alt="" width="40px" />
+                <p class="majalla28">استهداف صحيح</p>
+              </div>
+              <div class="d-flex align-items-center justify-content-center">
+                <img src="../assets/circle.png" alt="" width="40px" />
+                <p class="majalla28">استهداف صحيح</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -114,15 +166,15 @@ export default {
   font-weight: bold; /* سمك الخط */
 }
 .right {
-  padding-right: 29%
+  padding-right: 29%;
 }
 .right2 {
   padding-left: 29%;
 }
-.tops{
-    margin-top: -50px;
+.tops {
+  margin-top: -50px;
 }
-.bott{
-    margin-top: 6px;
+.bott {
+  margin-top: 6px;
 }
 </style>

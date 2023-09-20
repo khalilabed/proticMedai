@@ -1,18 +1,57 @@
+:root{
+    --font-family-majalla:'majalla ';
+    --font-family-majalla:'majallab';
+}
+
+@font-face{
+    font-family:'majalla';
+    src: url('../font/majalla.ttf');
+}
+@font-face{
+    font-family:'majallab';
+    src: url('../font/majallab.ttf');
+}
 body{
     direction: rtl;
+    font-family: var(--font-family-majalla) !important;
 }
+/* bold */
+.majallab56{ font-family: var(--font-family-majallab) !important; font-size: 56px !important;}
+.majallab40{ font-family: var(--font-family-majallab) !important; font-size: 40px !important;}
+.majallab28{ font-family: var(--font-family-majallab) !important; font-size: 28px !important;}
+.majallab36{ font-family: var(--font-family-majallab) !important; font-size: 36px !important;}
+.majallab24{ font-family: var(--font-family-majallab) !important; font-size: 24px !important;}
+
+
+
+/* not bold */
+.majalla18{ font-family: var(--font-family-majalla) !important; font-size: 18px !important;}
+.majalla32{ font-family: var(--font-family-majalla) !important; font-size: 32px !important;}
+.majalla24{ font-family: var(--font-family-majalla) !important; font-size: 24px !important;}
+.majalla20{ font-family: var(--font-family-majalla) !important; font-size: 20px !important; }
+.majalla28{ font-family: var(--font-family-majalla) !important; font-size: 28px !important; }
+
+
 /* start hero-section */
-.hero-section {
-  background-image: url("../bg-hero.png");
+.hero-section ,.bg-body ,.box-form{
+  background-image: url("../her2.png");
   background-size: cover;
   background-position: center;
-  height: 600px;
+  height: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-position: 100%;
 }
-
+.bg-body{
+  background-image: url("../Groubg.png");
+  height: auto;
+}
+.padd{  
+  padding-top: 150px;
+  padding-bottom:300px;
+}
 .hero-text {
   font-size: 24px;
   margin-top: 20px;
@@ -96,7 +135,10 @@ body{
 }
 
 .box-form{
-    background-color: #449DCF;
+     background-image: url("../form.png");
+     background-position: 100px 50px;
+  height: auto;
+    
 }
 .box-book img{
     width: 100%;
@@ -146,23 +188,7 @@ body{
   
 }
 
-/* .triangle-btn:before {
-  content: "";
-  transition: all 0.5s ease-out;
-  top: 1px;
-  bottom: 1px;
-  right: 0px;
-  width: 100%;
-  background-color: #d209fa;
-  background-image: -owg-linear-gradient(left, #d209fa 1%, #4f81d4 100%);
-  background-image: -webkit-linear-gradient(left, #d209fa 1%, #4f81d4 100%);
-  background-image: -moz-linear-gradient(left, #d209fa 1%, #4f81d4 100%);
-  background-image: -o-linear-gradient(left, #d209fa 1%, #4f81d4 100%);
-  background-image: linear-gradient(left, #d209fa 1%, #4f81d4 100%);
-  position: absolute;
-  -webkit-clip-path: polygon(0 0, 100% 50%, 0 100%, 0 98%, 95% 50%, 0 2%);
-  clip-path: polygon(0 0, 100% 50%, 0 100%, 0 98%, 95% 50%, 0 2%);
-} */
+
 
 .triangle-btn:hover {
   overflow: visible;
@@ -186,6 +212,12 @@ body{
     right: -15px;
     opacity: 0.1;
   }
+}
+.w-size{
+  width: 80% !important;
+}
+.showmobile{
+  display: none;
 }
 
 @media only screen and (max-width: 790px) {
@@ -219,10 +251,47 @@ body{
   .box-form{
 text-align: center;
   }
-  .none img{
+  /* .none img{
       display: none !important;
-  }
+  } */
    .none{
        text-align: center;
    }
+
+.showmobile{
+  display: inline;
+}
+.majallab56{ font-size: 44px !important; padding-bottom: 30px }
+.majallab40{ font-family: var(--font-family-majallab) !important; font-size: 40px !important;}
+.majallab28{ font-family: var(--font-family-majallab) !important; font-size: 25px !important;}
+.majallab36{ font-family: var(--font-family-majallab) !important; font-size: 30px !important;}
+.majallab24{ font-family: var(--font-family-majallab) !important; font-size: 20px !important;}
+
+.triangle-text {
+  margin-left: -15px !important;
+}
+/* not bold */
+.majalla18{ font-family: var(--font-family-majalla) !important; font-size: 18px !important;}
+.majalla32{ font-family: var(--font-family-majalla) !important; font-size: 22px !important;}
+.majalla24{ font-family: var(--font-family-majalla) !important; font-size: 24px !important;}
+.majalla20{ font-family: var(--font-family-majalla) !important; font-size: 20px !important; }
+.majalla28{ font-family: var(--font-family-majalla) !important; font-size: 22px !important; }
+.padd{
+  display: none !important;
+}
+.w-size {
+  width: 97% !important;
+  margin-right: 13px;
+}
+.mob-img{
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 100px;
+}
+ .mob-img img{
+  width: 80%;
+ }
+ .size{
+  margin-right : 13% ;
+}
 }
