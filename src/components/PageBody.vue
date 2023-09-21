@@ -11,7 +11,7 @@
               <div class="wraper">
                 <ul class="btn-wraper">
                   <li
-                    v-for="item in section1.slice(0, 3)"
+                    v-for="item in section1.slice(0, 2)"
                     :key="item.id"
                     class="triangle-btn"
                   >
@@ -31,7 +31,7 @@
               <div class="wraper">
                 <ul class="btn-wraper">
                   <li
-                    v-for="item in section1.slice(3, 5)"
+                    v-for="item in section1.slice(2, 4)"
                     :key="item.id"
                     class="triangle-btn"
                   >
@@ -46,23 +46,32 @@
               </div>
             </div>
           </div>
+          <div class="text-center py-5">
+            <button
+              type="submit"
+              @click="scrollToTop" 
+              class="btn btn-primary px-5 mt-4 majalla20 blod-none"
+            >
+              اطلب نسختك الان
+            </button>
+          </div>
         </div>
       </div>
 
       <div
         class="row align-items-center justify-content-center text-center padd"
       >
-        <div class="col-4">
+        <div class="col-4 text-int">
           <div class="d-flex align-items-center triangle-item right none">
-            <p class="ps-2 ps-3 tops majalla28">استهداف صحيح</p>
+            <p class="ps-2 ps-3 tops majalla28">لاستهداف صحيح</p>
             <img src="../assets/Arrow1.png" alt="" width="95px" class="none" />
           </div>
           <div class="d-flex align-items-center right none">
-            <p class="ps-3 majalla28">استهداف صحيح</p>
+            <p class="ps-3 majalla28">لترويج وإقناع قوي</p>
             <img src="../assets/Arrow2.png" alt="" width="95px" height="20px" />
           </div>
           <div class="d-flex align-items-center right none">
-            <p class="pt-5 ps-3 majalla28">استهداف صحيح</p>
+            <p class="pt-5 ps-3 majalla28">لمنتج مميز ومقنع للعملاء</p>
             <img src="../assets/Arrow3.png" alt="" width="95px" class="none" />
           </div>
         </div>
@@ -72,18 +81,18 @@
           </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-4 text-int">
           <div class="d-flex align-items-center triangle-item right2 none">
             <img src="../assets/Arrow4.png" alt="" width="95px" />
-            <p class="pe-3 tops majalla28">استهداف صحيح</p>
+            <p class="pe-3 tops majalla28">لتحديد استراتجية السوق المقنعة</p>
           </div>
           <div class="d-flex align-items-center right2 none">
             <img src="../assets/Arrow6.png" alt="" width="95px" height="20px" />
-            <p class="pe-3 majalla28">استهداف صحيح</p>
+            <p class="pe-3 majalla28">لجعلك نشاطك قوي</p>
           </div>
           <div class="d-flex align-items-center right2 none">
             <img src="../assets/Arrow5.png" alt="" width="95px" class="" />
-            <p class="pt-5 pe-3 bott majalla28">استهداف صحيح</p>
+            <p class="pt-5 pe-3 bott majalla28">لزيادة مبيعات</p>
           </div>
         </div>
       </div>
@@ -138,11 +147,10 @@ export default {
   data() {
     return {
       section1: [
-        { id: 1, text: "استهداف صحيح" },
-        { id: 2, text: "استهداف صحيح" },
-        { id: 3, text: "استهداف صحيح" },
-        { id: 4, text: "استهداف صحيح" },
-        { id: 5, text: "استهداف صحيح" },
+        { id: 1, text: "نقدم لكم أفكارنا المجنونة على طبق من ذهب" },
+        { id: 2, text: "استهداف صحيح في فعالية اليوم الوطني" },
+        { id: 3, text: "استهداف صحيح في فعالية اليوم الوطني" },
+        { id: 4, text: "كيف تجعل قابلية أعلى لعملائك" },
       ],
       section3: [
         { text: "استهداف صحيح", image: "../assets/Arrow1.png" },
@@ -156,6 +164,15 @@ export default {
       ],
     };
   },
+  methods: {
+    scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
+      });
+    }
+  }
 };
 </script>
 

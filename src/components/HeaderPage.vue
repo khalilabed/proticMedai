@@ -37,9 +37,14 @@
           </li>
         </ul>
         <div class="d-flex">
-          <button type="button" class="btn btn-light majalla24  py-2 px-4 hover">
-            اطلب الكتيب
-          </button>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <button
+              type="button"
+              class="btn btn-light majalla24 py-2 px-4 hover"
+            >
+              اطلب بطاقة تهنئة
+            </button></a
+          >
         </div>
       </div>
     </div>

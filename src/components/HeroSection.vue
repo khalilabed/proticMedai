@@ -75,7 +75,7 @@ export default {
     return {
       name: "",
       email: "",
-      isSubmitting: false, // Add this property to track form submission
+      phone: "",
       uploading: false,
       successMessage: "",
     };
@@ -83,33 +83,27 @@ export default {
   methods: {
     async postData() {
       try {
-        this.isSubmitting = true;
         const response = await axios.post(
-          "http://192.168.3.103/celebration/public/api/send-email-pdf",
+          "https://website.moalhathloul.com/api/send-email-pdf",
           {
             name: this.name,
             email: this.email,
+            phone: this.phone,
           }
         );
         console.log("Data sent successfully:", response.data);
-
-        // Clear the input fields after successful submission
+        const newTab = window.open(
+          "https://drive.google.com/file/d/1gP-FfEl5XW2WLhgAF1UqrIhU0fVr16z9/view?usp=sharing",
+          "_blank"
+        );
+        if (newTab) {
+          newTab.focus(); // Optional: Focus on the new tab
+        }
         this.name = "";
         this.email = "";
-
-        // Show a success message
-        this.uploading = true;
-        this.successMessage = "تم الاسال بنجاح";
-
-        // Reset isSubmitting, uploading, and successMessage after a certain time if needed
-        setTimeout(() => {
-          this.isSubmitting = false;
-          this.uploading = false;
-          this.successMessage = "";
-        }, 5000); // Clear the message after 5 seconds (adjust the time as needed)
+        this.phone = "";
       } catch (error) {
         console.error("Error sending data:", error);
-        // Handle errors as needed
       }
     },
   },
